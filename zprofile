@@ -1,6 +1,6 @@
-local RC_PARTS_DIR=$ZSH_HOME/zshrc.d
+local PROFILE_PARTS=$ZSH_HOME/zprofile.d
 
-local parts=($RC_PARTS_DIR)
+local parts=($PROFILE_PARTS)
 
 # Load everything from parts directories
 for dir in $parts; do
