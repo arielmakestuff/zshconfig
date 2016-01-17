@@ -18,10 +18,6 @@ zplug "zsh-users/zsh-completions"
 # zplug "mafredri/zsh-async", nice:1
 # zplug "sindresorhus/pure", nice:2
 
-# zsh-megaprompt
-# zplug "willghatch/zsh-hooks", nice:1
-# zplug "willghatch/zsh-megaprompt", nice:2
-
 # fzf
 zplug "junegunn/fzf-bin", \
     as:command, \
@@ -38,8 +34,6 @@ zplug "chrissicool/zsh-256color"
 # Manage zplug
 zplug "b4b4r07/zplug"
 
-# zplug "sharat87/zsh-vim-mode", nice:19
-# zplug "plugins/vi-mode", from:oh-my-zsh
 
 # ===========================================================================
 # Install plugins
@@ -57,7 +51,7 @@ fi
 # Load plugins
 # ===========================================================================
 
-zplug load 
+zplug load
 
 # ===========================================================================
 #
