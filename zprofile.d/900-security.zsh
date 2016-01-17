@@ -1,4 +1,3 @@
-# Add ssh keys to ssh-agent
 GPGHOME=$HOME/.gnupg
 ABSFILE="$HOME/.ssh/id_rsa"
 SSH_ADD="/usr/bin/ssh-add $ABSFILE"
@@ -23,5 +22,3 @@ function choose_pinentry()
     echo "pinentry-program $pinentry_program" >> $GPGHOME/gpg-agent.conf
     systemctl --user restart gpg-agent
 }
-
-add_id
