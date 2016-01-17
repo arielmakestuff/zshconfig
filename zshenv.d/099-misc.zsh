@@ -77,25 +77,31 @@ function rsc_new_window()
 
 
 # fzf integration
-function ff()
+function general_fzf()
 {
     local files
-    files=(${(f)"$(find . | fzf)"})
+    files=(${(f)"$($1 $2 | fzf)"})
 
     if [[ -n $files ]]; then
 	echo $files
     fi
+}
+
+function ff()
+{
+    echo $(general_fzf find .)
+}
+
+function hf()
+{
+    echo $(general_fzf locate $HOME)
 }
 
 function lf()
 {
-    local files
-    files=(${(f)"$(locate $(pwd) | fzf)"})
-
-    if [[ -n $files ]]; then
-	echo $files
-    fi
+    echo $(general_fzf locate /)
 }
+
 
 # =================================================================
 #
