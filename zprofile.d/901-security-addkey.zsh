@@ -1,2 +1,3 @@
 # Add ssh keys to ssh-agent
-add_id
+# choose_pinentry /usr/bin/pinentry-curses
+# add_id
