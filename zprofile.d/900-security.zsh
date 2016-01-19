@@ -18,7 +18,11 @@ function add_id()
 function choose_pinentry()
 {
     local pinentry_program=$1
-    cat $GPGHOME/gpg-agent-base.conf > $GPGHOME/gpg-agent.conf
-    echo "pinentry-program $pinentry_program" >> $GPGHOME/gpg-agent.conf
-    systemctl --user restart gpg-agent
+    cmd="pinentry-program $pinentry_program"
+    found=$(grep -F "$cmd" $GPGHOME/gpg-agent.conf)
+    if [ -z "$found" ]; then
+	cat $GPGHOME/gpg-agent-base.conf > $GPGHOME/gpg-agent.conf
+	echo "pinentry-program $pinentry_program" >> $GPGHOME/gpg-agent.conf
+	systemctl --user restart gpg-agent
+    fi
 }
