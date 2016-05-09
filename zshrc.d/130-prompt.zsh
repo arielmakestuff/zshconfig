@@ -14,7 +14,7 @@ local vi_insert_marker="[%{$fg[cyan]%}%BI%b%{$reset_color%}]"
 local vi_unknown_marker="[%{$fg[red]%}%BU%b%{$reset_color%}]"
 local vi_mode="$vi_insert_marker"
 
-vi_mode_indicator () 
+vi_mode_indicator ()
 {
     case ${KEYMAP} in
 	(vicmd)      echo $vi_normal_marker ;;
@@ -24,7 +24,7 @@ vi_mode_indicator ()
 }
 
 # Reset mode-marker and prompt whenever the keymap changes
-function zle-line-init zle-keymap-select 
+function zle-line-init zle-keymap-select
 {
     vi_mode="$(vi_mode_indicator)"
     zle reset-prompt
@@ -43,9 +43,13 @@ local host='%m'
 # Colorize freely
 # Colors are set like: $FG[$colorcode]
 # See 101-color.zsh spectrum_ls function for list of color codes
-local user_host="${FG[010]}${username}@${FG[151]}${host}${RESET_COLOR}"
+usercolor="${FG[010]}"
+if [ "$USER" = "root" ]; then
+    usercolor="${FG[196]}"  # root should always be red
+fi
+local user_host="$usercolor${username}@${FG[151]}${host}${RESET_COLOR}"
 local current_dir="${FG[219]}%~${RESET_COLOR}"
-precmd () 
+precmd ()
 {
     # local git_info="$(parse_git_state)"
     print -rP "${user_host} ${current_dir} $(git_prompt_string)"

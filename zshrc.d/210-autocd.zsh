@@ -22,7 +22,7 @@ gitwork=$HOME/opt/repos/git/programming/work
 
 # Git
 gitpub=$HOME/opt/repos/git/public
-gitpriv=$HOME/opt/repos/git/private
+gitme=$HOME/opt/repos/git/personal
 gitbare=$HOME/opt/repos/git/export
 
 # -----------------------------------------------------------------
@@ -36,7 +36,7 @@ usrdoc=/usr/share/doc
 
 : ~tmp downloads ~torrentdl ~music ~games ~projects ~pydev ~dev \
 ~programming ~repos ~hgrepos ~hgwork ~gitrepos ~gitwork ~gitpub \
-~gitpriv ~gitbare ~usrdoc
+~gitme ~gitbare ~usrdoc
 
 # -----------------------------------------------------------------
 #

@@ -2,7 +2,8 @@
 fpath=(~/.config/local/zsh/completion $fpath)
 
 setopt completealiases
-autoload -U compaudit compinit
+autoload -U compaudit compinit 
+compinit
 
 # Load complist
 zmodload zsh/complist

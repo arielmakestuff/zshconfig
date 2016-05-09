@@ -90,16 +90,19 @@ function general_fzf()
 function ff()
 {
     echo $(general_fzf find .)
+    zle reset-prompt
 }
 
 function hf()
 {
     echo $(general_fzf locate $HOME)
+    zle reset-prompt
 }
 
 function lf()
 {
     echo $(general_fzf locate /)
+    zle reset-prompt
 }
 
 
