@@ -9,7 +9,7 @@ source $HOME/usr/bin/virtualenvwrapper.sh
 
 # ==================== GIT-FLOW COMPLETION ========================
 
-source /usr/share/git-flow/git-flow-completion.zsh
+source /usr/share/zsh/vendor-completions/_git-flow
 
 # =================================================================
 
