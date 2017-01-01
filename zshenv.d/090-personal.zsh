@@ -17,6 +17,11 @@ export NVIM_TUI_ENABLE_TRUE_COLOR=1
 # Path
 path=($HOME/usr/bin $path)
 
+# Python virtualenv project paths
+if [ -n $VENV_PROJECT_DIR ]; then
+    path=($VENV_PROJECT_DIR $path)
+fi
+
 # Password Store
 export PASSWORD_STORE_DIR=$XDG_DATA_HOME/local/password-store
 
