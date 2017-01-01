@@ -26,8 +26,6 @@ alias spwgen_web='pwgen -c -s -n 20'
 alias nd='pushd'
 alias pd='popd'
 
-# NeoVim
-alias vim='nvim'
 
 # =================================================================
 
