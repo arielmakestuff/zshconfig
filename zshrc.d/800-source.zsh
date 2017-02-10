@@ -3,7 +3,7 @@
 # ==================== VIRTUALENVWRAPPER ==========================
 
 #  source $HOME/usr/bin/virtualenvwrapper_bashrc
-source $HOME/usr/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 # =================================================================
 
