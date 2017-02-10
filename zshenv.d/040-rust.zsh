@@ -2,14 +2,15 @@
 # Rust settings
 # =================================================================
 
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:~/usr/stow/rust-1.10/lib"
+
+export RUSTUP_HOME=$XDG_DATA_HOME/rustup
 
 export CARGO_HOME=$XDG_DATA_HOME/cargo
 
-export RUST_SRC_PATH=$HOME/opt/repos/git/public/rust/src
+export RUST_SRC_PATH=$RUSTUP_HOME/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
 
 # Path
-path=($XDG_DATA_HOME/cargo/bin $path)
+path=($CARGO_HOME/bin $path)
 
 
 # =================================================================
