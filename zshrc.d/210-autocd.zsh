@@ -2,28 +2,25 @@
 # Home locations
 # -----------------------------------------------------------------
 # Basic
-tmp=$HOME/tmp
+tmp=$HOME/.cache/tmp
 
 # Personal downloads=$HOME/opt/downloads
+downloads=$XDG_CACHE_HOME/downloads
 torrentdl=$HOME/opt/downloads/torrents
-music=$HOME/opt/music
-games=$HOME/opt/games
+music=$HOME/media/music
+games=$HOME/games
 projects=$HOME/opt/projects
 
 # Programming
 pydev=$HOME/opt/projects/devel/python
 dev=$HOME/opt/projects/devel
-programming=$HOME/usr/src
-repos=$HOME/opt/repos
-hgrepos=$HOME/opt/repos/hg
-hgwork=$HOME/opt/repos/hg/programming/work
-gitrepos=$HOME/opt/repos/git
-gitwork=$HOME/opt/repos/git/programming/work
 
-# Git
-gitpub=$HOME/opt/repos/git/public
-gitme=$HOME/opt/repos/git/personal
-gitbare=$HOME/opt/repos/git/export
+# Source code
+src=$HOME/.local/src
+mysrc=$HOME/src/me
+cfgsrc=$HOME/src/config
+exportsrc=$HOME/src/export
+oldsrc=$HOME/src/old
 
 # -----------------------------------------------------------------
 # Non-Home locations
@@ -35,8 +32,7 @@ usrdoc=/usr/share/doc
 # -----------------------------------------------------------------
 
 : ~tmp downloads ~torrentdl ~music ~games ~projects ~pydev ~dev \
-~programming ~repos ~hgrepos ~hgwork ~gitrepos ~gitwork ~gitpub \
-~gitme ~gitbare ~usrdoc
+~src ~mysrc ~cfgsrc ~exportsrc ~oldsrc ~usrdoc
 
 # -----------------------------------------------------------------
 #
