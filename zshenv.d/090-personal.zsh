@@ -15,7 +15,7 @@ HISTFILE=$XDG_CACHE_HOME/zsh/history
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 # Path
-path=($HOME/usr/bin $path)
+path=($HOME/.local/bin $path)
 
 # Python virtualenv project paths
 if [ -n $VENV_PROJECT_DIR ]; then
