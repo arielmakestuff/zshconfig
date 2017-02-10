@@ -23,7 +23,7 @@ export PYTHONVERSION=3.6
 export PYLINTRC=~/.config/local/pylint/pylintrc
 
 # IPython
-IPYTHONDIR=(~/.config/ipython)
+export IPYTHONDIR=$XDG_DATA_HOME/ipython
 
 
 # =================================================================
