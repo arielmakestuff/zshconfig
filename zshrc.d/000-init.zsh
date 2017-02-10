@@ -1,8 +1,8 @@
 # Add path for custom completion scripts
-fpath=(~/.config/local/zsh/completion $fpath)
+fpath=($ZSH_HOME/completion $fpath)
 
 setopt completealiases
-autoload -U compaudit compinit 
+autoload -U compaudit compinit
 compinit
 
 # Load complist
