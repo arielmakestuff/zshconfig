@@ -31,7 +31,7 @@ usrdoc=/usr/share/doc
 # Set aliases
 # -----------------------------------------------------------------
 
-: ~tmp downloads ~torrentdl ~music ~games ~projects ~pydev ~dev \
+: ~tmp ~downloads ~torrentdl ~music ~games ~projects ~pydev ~dev \
 ~src ~mysrc ~cfgsrc ~exportsrc ~oldsrc ~usrdoc
 
 # -----------------------------------------------------------------
