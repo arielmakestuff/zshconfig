@@ -3,8 +3,8 @@
 # ===========================================================================
 
 # First-time run: need to download zplug if it doesn't exist
-[[ -f $ZPLUG_HOME/zplug ]] || (echo "zplug missing, please install http://git.io/zplug to $ZPLUG_HOME" && exit 1)
-source $ZPLUG_HOME/zplug
+[[ -f $ZPLUG_HOME/init.zsh ]] || (echo "zplug missing, please install https://github.com/zplug/zplug to $ZPLUG_HOME" && exit 1)
+source $ZPLUG_HOME/init.zsh
 
 # ===========================================================================
 # Plugins
@@ -12,6 +12,7 @@ source $ZPLUG_HOME/zplug
 
 
 # zsh plugins
+zplug "petervanderdoes/git-flow-completion"
 zplug "zsh-users/zsh-completions"
 
 # pure prompt
@@ -22,17 +23,17 @@ zplug "zsh-users/zsh-completions"
 zplug "junegunn/fzf-bin", \
     as:command, \
     from:gh-r, \
-    file:fzf, \
-    of:"*linux*amd64*"
-zplug "junegunn/fzf", nice:1
+    rename-to:fzf, \
+    use:"*linux*amd64*"
+zplug "junegunn/fzf", defer:1
 
 # others
-zplug "zsh-users/zsh-syntax-highlighting", nice:15
-zplug "tarruda/zsh-autosuggestions", nice:16
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "tarruda/zsh-autosuggestions", defer:3
 zplug "chrissicool/zsh-256color"
 
 # Manage zplug
-zplug "b4b4r07/zplug"
+zplug "zplug/zplug"
 
 
 # ===========================================================================
