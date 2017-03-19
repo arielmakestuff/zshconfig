@@ -3,7 +3,7 @@
 # =================================================================
 
 
-eval "$(dircolors -b ~/.config/local/dircolors/dircolorsrc)"
+eval "$(dircolors -b ~/.config/dircolors/dircolorsrc)"
 
 
 # =================================================================
