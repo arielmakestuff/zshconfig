@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+function abspath
+{
+    python -c "import os.path as op;print(op.abspath(\"$1\"))"
+}
+
+# Find zsh directory
+ZSH_BIN_DIR=$(dirname $(abspath $0))
+ZSH_CONFIG_DIR=$(abspath $ZSH_BIN_DIR/..)
+ZSH_LIB_DIR=$ZSH_CONFIG_DIR/lib
+ZPLUG_HOME=$ZSH_LIB_DIR/zplug
+ZPLUG_REPO_DIR=$ZPLUG_HOME/repos/zplug/zplug
+
+echo ">" $ZSH_BIN_DIR
+echo ">" $ZSH_CONFIG_DIR
+echo ">" $ZSH_LIB_DIR
+echo ">" $ZPLUG_HOME
+echo ">" $ZPLUG_REPO_DIR
+
+# Check if zplug is installed
+if [[ ! -d $ZPLUG_REPO_DIR ]]; then
+    mkdir -p $ZPLUG_REPO_DIR
+    cd $ZPLUG_REPO_DIR
+    git clone https://github.com/zplug/zplug .
+    ln -s $ZPLUG_REPO_DIR/init.zsh $ZPLUG_HOME
+    cd $OLDPWD
+    source $ZPLUG_HOME/init.zsh
+fi
