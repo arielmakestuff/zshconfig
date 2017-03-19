@@ -4,7 +4,11 @@
 
 
 # export TERM=xterm-256color
-export TERM=rxvt-unicode-256color
+if [[ -z $DISPLAY ]]; then
+    export TERM=linux
+else
+    export TERM=rxvt-unicode-256color
+fi
 
 
 # =================================================================
