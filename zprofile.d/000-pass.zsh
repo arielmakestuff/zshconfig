@@ -10,8 +10,8 @@ fi
 if [ -z "$display_manager" ]; then
     #For fortune/cowsay/ddate combo
     echo ""
-    /usr/games/fortune -a
+    fortune -a
     echo ""
-    /usr/bin/ddate
+    ddate
     #echo ""
 fi
