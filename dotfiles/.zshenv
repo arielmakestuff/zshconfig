@@ -1,1 +1,1 @@
-source $XDG_CONFIG_HOME/zsh/zshenv
+source $HOME/.config/zsh/zshenv
