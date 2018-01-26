@@ -17,7 +17,9 @@ export XDG_CACHE_HOME=$HOME/.cache
 export FDO_CONFIG=$HOME/.config
 
 # Qt5 Workaround
-export XDG_CURRENT_DESKTOP=KDE
+# export XDG_CURRENT_DESKTOP=KDE
+# export QT_QPA_PLATFORMTHEME=qt5ct
+[ "$XDG_CURRENT_DESKTOP" = "KDE" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
 
 
 # =================================================================
