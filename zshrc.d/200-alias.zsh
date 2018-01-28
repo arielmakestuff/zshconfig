@@ -29,6 +29,8 @@ alias spwgen_web='pwgen -c -s -n 20'
 alias nd='pushd'
 alias pd='popd'
 
+# Dotfiles management
+alias home="/usr/bin/env git --git-dir=$XDG_CACHE_HOME/local/$(hostname)/dotfiles.git --work-tree=$HOME"
 
 # =================================================================
 
