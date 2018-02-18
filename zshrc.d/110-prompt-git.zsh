@@ -18,13 +18,13 @@ GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}●%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg_bold[green]%}●%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
-parse_git_branch() 
+parse_git_branch()
 {
     (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
 }
 
 # Show different symbols as appropriate for various Git repository states
-parse_git_state() 
+parse_git_state()
 {
 
     # Compose this value via multiple conditional appends.
@@ -64,7 +64,7 @@ parse_git_state()
 }
 
 # If inside a Git repository, print its branch and state
-git_prompt_string() 
+git_prompt_string()
 {
     local git_where="$(parse_git_branch)"
     [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX${FG[192]}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
