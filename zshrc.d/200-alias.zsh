@@ -15,6 +15,8 @@ alias p='cd -'
 # alias l='ls --color=none'
 alias l='exa --color=never'
 alias ls='exa'
+alias t='tree --dirsfirst --sort=size -ChFL 1'
+alias t2='tree --dirsfirst --sort=size -ChFL 2'
 alias less='less -RMX'
 alias konq='kfmclient openProfile filemanagement'
 
