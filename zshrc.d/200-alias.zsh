@@ -34,6 +34,9 @@ alias pd='popd'
 # Dotfiles management
 alias home="/usr/bin/env git --git-dir=$XDG_CACHE_HOME/local/$(hostname)/dotfiles.git --work-tree=$HOME"
 
+# pacman commands
+alias pacorphan="/usr/bin/pacman -Qdtq"
+
 # =================================================================
 
 # =================================================================
