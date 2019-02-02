@@ -6,18 +6,13 @@
 # DevPI path
 export DEVPI_SERVERDIR=$XDG_DATA_HOME/devpi
 
-# python virtualenvwrapper for python3.5
-# export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/pyvenv-3.5
-# export VIRTUALENVWRAPPER_PYTHON=$HOME/usr/bin/python3.5
-# export WORKON_HOME=$HOME/opt/projects/devel/python/virtualenvwrapper
+# virtualenvwrapper
+VENV_DIR=$XDG_DATA_HOME/pipx/venv/virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=$VENV_DIR/bin/python
+export WORKON_HOME=$XDG_DATA_HOME/python-venv
 
-# # python virtualenvwrapper for python3.6
-# export WORKON_HOME=$XDG_DATA_HOME/python-venv
-# export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/pyenv.sh
-# export VIRTUALENVWRAPPER_PYTHON=$WORKON_HOME/python3.6/bin/python3
-
-# pew
-export WORKON_HOME=$XDG_DATA_HOME/pew
+# pipx
+export PIPX_HOME=$XDG_DATA_HOME/pipx/venv
 
 # Default python version
 export PYTHONVERSION=3.6
