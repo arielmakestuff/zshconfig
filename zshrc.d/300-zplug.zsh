@@ -31,6 +31,7 @@ zplug "junegunn/fzf", defer:1
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "tarruda/zsh-autosuggestions", defer:3
 zplug "chrissicool/zsh-256color"
+zplug "zsh-users/zaw", use:"zaw.zsh"
 
 # Manage zplug
 zplug "zplug/zplug"
