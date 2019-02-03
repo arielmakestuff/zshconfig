@@ -10,6 +10,7 @@ export DEVPI_SERVERDIR=$XDG_DATA_HOME/devpi
 VENV_DIR=$XDG_DATA_HOME/pipx/venv/virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=$VENV_DIR/bin/python
 export WORKON_HOME=$XDG_DATA_HOME/python-venv
+export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME
 
 # pipx
 export PIPX_HOME=$XDG_DATA_HOME/pipx/venv
