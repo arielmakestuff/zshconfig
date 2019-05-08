@@ -1,3 +1,7 @@
+if [[ "$PROFILE_ZSH" = "true" ]]; then
+    zmodload zsh/zprof
+fi
+
 local RC_PARTS_DIR=$ZSH_HOME/zshrc.d
 
 local parts=($RC_PARTS_DIR)
@@ -8,3 +12,7 @@ for dir in $parts; do
 	source $name
     done
 done
+
+if [[ "$PROFILE_ZSH" = "true" ]]; then
+    zprof
+fi
